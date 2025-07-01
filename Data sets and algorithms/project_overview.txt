@@ -1,0 +1,42 @@
+DATA SOURCE
+
+
+The dataset used in this project is the "Adult Income" dataset,
+publicly available from the UCI Machine Learning Repository:
+
+https://archive.ics.uci.edu/ml/datasets/adult
+
+The original dataset contains information about individuals such as age,
+education, occupation, and income. It is commonly used to evaluate fairness
+and bias in machine learning models.
+
+!!! The dataset is used here strictly for educational and research purposes.
+
+
+PROJECT FILE EXPLANATION
+
+
+1. adult_combined.csv
+   - The cleaned and merged dataset used for training and testing.
+   - Created from the original UCI Adult dataset.
+
+2. data_cleaning.py
+   - Contains functions to load, clean, and preprocess the data.
+   - Converts categorical variables using one-hot encoding.
+   - Can be reused for other datasets with similar structure.
+
+3. model_training.py
+   - Main script that trains 4 models (Logistic Regression, Decision Tree, Random Forest, SVM).
+   - Evaluates each model’s accuracy.
+   - Performs a fairness analysis (by gender) using the Random Forest model.
+
+4. requirements.txt
+   - Contains all required Python packages to run the project.
+   - Install with: pip install -r requirements.txt
+
+5. Screenshot or Graph (optional - assets folder)
+   - Visualization of fairness metrics (accuracy, selection rate, TPR, FPR) per gender.
+
+NOTE:
+- Run model_training.py as the main script to execute the full pipeline.
+- Requires Python 3.8+ and packages listed in requirements.txt
