@@ -26,7 +26,7 @@ def evaluate_models(models, X_test, y_test):
 
 def fairness_analysis(model, X_test, y_test):
     y_pred = model.predict(X_test)
-    # sex column could be 'sex_Male' or 'sex_Female' , choose
+
     if 'sex_Male' in X_test.columns:
         sensitive_feature = X_test['sex_Male']
     elif 'sex_Female' in X_test.columns:
@@ -64,3 +64,4 @@ if __name__ == "__main__":
     # Fairness analysis with Random Forest model
     print("\nFairness Analysis for Random Forest Model:")
     fairness_analysis(models["Random Forest"], X_test, y_test)
+
